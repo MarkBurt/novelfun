@@ -1,3 +1,6 @@
 rootProject.name = 'novelfun'
-include 'novelfun_admin'
+include 'novelfun-admin'
+include 'novelfun-common'
+include 'novelfun-front'
+include 'novelfun-crawl'
 

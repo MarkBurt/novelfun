@@ -1,8 +1,7 @@
-group 'novelfun_admin'
+group 'novelfun-common'
 apply plugin: 'application'
 apply plugin: 'org.springframework.boot'
-description("novelfun_admin")
-mainClassName = 'com.alsyun.admin.AdminApplication'
+description("novelfun-common")
 configurations {
     testImplementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-test'
 }

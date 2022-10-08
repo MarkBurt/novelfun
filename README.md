@@ -1,7 +1,7 @@
 # novelfun
  # 注意该项目为novel-plus gradle 版本
 <p align="center">
-      👉 <a href='https://novel.xxyopen.com'>官网</a>  |  👉 <a href='http://47.106.243.172:8888'>演示站点</a>  |  👉 <a href='https://docs.xxyopen.com/course/novelplus/'>项目文档（含安装教程）</a>
+      👉 <a href='https://novel.xxyopen.com'>官网</a>  |  👉 <a href='http://47.106.243.172:8888'>演示站点</a>                                                               
 </p> 
 ## 项目介绍
 
