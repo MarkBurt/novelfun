@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.6.12'
+    id 'org.springframework.boot' version '2.1.8.RELEASE'
     id 'io.spring.dependency-management' version '1.0.14.RELEASE'
     id 'java'
 }
@@ -15,6 +15,9 @@ configurations {
 }
 
 repositories {
+    maven { url "https://maven.aliyun.com/nexus/content/groups/public/" }
+    maven { url "https://repo.spring.io/milestone" }
+    maven { url "https://plugins.gradle.org/m2/" }
     mavenCentral()
 }
 
