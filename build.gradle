@@ -17,7 +17,6 @@ allprojects{
     }
 
     ext{
-        //spring 依赖
         set('springBootVersion', "2.1.8.RELEASE")
 
 
