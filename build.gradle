@@ -89,6 +89,7 @@ subprojects {
         }
     }
     dependencies {
+        implementation 'org.projectlombok:lombok:1.18.8'
         implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml'
     }
 
