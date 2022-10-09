@@ -10,4 +10,25 @@ dependencies {
     implementation ('org.springframework.boot:spring-boot-starter-web'){
         exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
     }
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-cache'
+    implementation 'net.sf.ehcache:ehcache'
+    implementation 'org.springframework.boot:spring-boot-starter-redis'
+    implementation 'mysql:mysql-connector-java'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter'
+    implementation 'io.shardingsphere:sharding-jdbc-spring-boot-starter'
+    implementation 'io.shardingsphere:sharding-jdbc-spring-namespace'
+    implementation 'com.github.pagehelper:pagehelper-spring-boot-starter'
+    implementation 'com.cuisongliu:orderbyhelper-spring-boot-starter'
+    implementation 'org.apache.commons:commons-lang3'
+    implementation ('org.apache.httpcomponents:httpclient:4.5.2'){
+        exclude group: 'commons-logging', module: 'commons-logging'
+    }
+    implementation 'org.mybatis.dynamic-sql:mybatis-dynamic-sql'
+    implementation 'org.mybatis.generator:mybatis-generator-core'
+    implementation 'org.springframework.boot:spring-boot-configuration-processor'
+    implementation 'io.github.xxyopen:xxy-model'
+    implementation 'io.github.xxyopen:xxy-web'
+    implementation 'io.github.xxyopen:xxy-util'
+
 }
