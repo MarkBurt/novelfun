@@ -6,8 +6,30 @@ configurations {
     testImplementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-test'
 }
 dependencies {
-    implementation'org.springframework.boot:spring-boot-starter-undertow'
-    implementation ('org.springframework.boot:spring-boot-starter-web'){
+    annotationProcessor 'org.projectlombok:lombok'
+    api'org.springframework.boot:spring-boot-starter-undertow'
+    api ('org.springframework.boot:spring-boot-starter-web'){
         exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
     }
+    api 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    api 'org.springframework.boot:spring-boot-starter-cache'
+    api 'net.sf.ehcache:ehcache'
+    api 'org.springframework.boot:spring-boot-starter-redis'
+    api 'mysql:mysql-connector-java'
+    api 'org.mybatis.spring.boot:mybatis-spring-boot-starter'
+    api 'io.shardingsphere:sharding-jdbc-spring-boot-starter'
+    api 'io.shardingsphere:sharding-jdbc-spring-namespace'
+    api 'com.github.pagehelper:pagehelper-spring-boot-starter'
+    api 'com.cuisongliu:orderbyhelper-spring-boot-starter'
+    api 'org.apache.commons:commons-lang3'
+    api ('org.apache.httpcomponents:httpclient:4.5.2'){
+        exclude group: 'commons-logging', module: 'commons-logging'
+    }
+    api 'org.mybatis.dynamic-sql:mybatis-dynamic-sql'
+    api 'org.mybatis.generator:mybatis-generator-core'
+    api 'org.springframework.boot:spring-boot-configuration-processor'
+    api 'io.github.xxyopen:xxy-model'
+    api 'io.github.xxyopen:xxy-web'
+    api 'io.github.xxyopen:xxy-util'
+
 }

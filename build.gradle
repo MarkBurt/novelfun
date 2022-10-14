@@ -10,6 +10,9 @@ allprojects{
     apply plugin:'io.spring.dependency-management'
 
     repositories {
+        maven {
+            url "http://repo.mycompany.com/maven2"
+        }
         maven { url "https://maven.aliyun.com/nexus/content/groups/public/" }
         maven { url "https://repo.spring.io/milestone" }
         maven { url "https://plugins.gradle.org/m2/" }
@@ -18,8 +21,24 @@ allprojects{
 
     ext{
         set('springBootVersion', "2.1.8.RELEASE")
-
-
+        set('mysql_version','8.0.11')
+        set('mybatis','2.1.4')
+        set('mybatis_generator_version','1.4.0')
+        set('mybatis_dynamic_sql_version','1.1.4')
+        set('pagehelper_version','1.2.5')
+        set('orderbyhelper_version','1.0.2')
+        set('commons_lang3_version','3.4')
+        set('jjwt_version','0.9.0')
+        set('elasticsearch_version>','7.9.3')
+        set('jest_version','6.3.1')
+        set('redis_version','1.4.1.RELEASE')
+        set('redisson_version','3.12.5')
+        set('sharding_jdbc_version','3.0.0')
+        set('aliyun_sdk_oss_version','2.4.0')
+        set('commons_fileupload_version','1.3.1')
+        set('fastdfs_client_version','1.26.1-RELEASE')
+        set('alipay_sdk_java_version','4.9.153.ALL')
+        set('xxyopen_version','1.0.0')
     }
     dependencyManagement {
         imports {
@@ -27,7 +46,27 @@ allprojects{
         }
         dependencies {
             dependency "org.springframework.boot:spring-boot-starter-undertow:${springBootVersion}"
+            dependency 'org.projectlombok:lombok:1.18.24'
+            dependency "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
+            dependency "org.springframework.boot:spring-boot-test:${springBootVersion}"
 
+            dependency "org.springframework.boot:spring-boot-starter-thymeleaf:${springBootVersion}"
+            dependency "org.springframework.boot:spring-boot-starter-cache:${springBootVersion}"
+            dependency "org.springframework.boot:spring-boot-starter-redis:${redis_version}"
+            dependency "mysql:mysql-connector-java:${mysql_version}"
+            dependency "org.mybatis.spring.boot:mybatis-spring-boot-starter:${mybatis}"
+            dependency "io.shardingsphere:sharding-jdbc-spring-boot-starter:${sharding_jdbc_version}"
+            dependency "io.shardingsphere:sharding-jdbc-spring-namespace:${sharding_jdbc_version}"
+            dependency "com.github.pagehelper:pagehelper-spring-boot-starter:${pagehelper_version}"
+            dependency "com.cuisongliu:orderbyhelper-spring-boot-starter:${orderbyhelper_version}"
+            dependency "org.apache.commons:commons-lang3:${commons_lang3_version}"
+            dependency "org.apache.httpcomponents:httpclient:4.5.2"
+            dependency "org.mybatis.dynamic-sql:mybatis-dynamic-sql:${mybatis_dynamic_sql_version}"
+            dependency "org.mybatis.generator:mybatis-generator-core:${mybatis_generator_version}"
+            dependency "org.springframework.boot:spring-boot-configuration-processor:${springBootVersion}"
+            dependency "io.github.xxyopen:xxy-model:${xxyopen_version}"
+            dependency "io.github.xxyopen:xxy-web:${xxyopen_version}"
+            dependency "io.github.xxyopen:xxy-util:${xxyopen_version}"
 
         }
     }
@@ -50,6 +89,7 @@ subprojects {
         }
     }
     dependencies {
+        implementation 'org.projectlombok:lombok:1.18.8'
         implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml'
     }
 
