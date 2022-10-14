@@ -6,8 +6,8 @@ configurations {
     testImplementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-test'
 }
 dependencies {
-    implementation'org.springframework.boot:spring-boot-starter-undertow'
-    implementation ('org.springframework.boot:spring-boot-starter-web'){
-        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
-    }
+
+    api project (':novelfun-common')
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
 }
